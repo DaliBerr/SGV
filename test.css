@@ -1,0 +1,291 @@
+/* 基本设置 */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000;
+    background-color: #FFFFFF;
+    padding: 0;
+    margin: 0;
+}
+
+#content{
+    display: flex;
+}
+/* 段落、区块和节的阴影效果 */
+section {
+    display:flex;
+    padding: 2em;
+    margin: 2em 0;
+    box-shadow: 0 1em 2em rgba(0, 0, 0, 0.2);
+    border-top: double 4px #E9C893;
+    border-bottom: double 4px #E9C893;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1em;
+    margin-top: 6em;
+    margin-bottom: 0;
+}
+article section{
+    all:unset;
+}
+/* 底部样式 */
+footer {
+    background-color: #1E392A;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 1em;
+}
+.external_links{
+    color: #4425f0;
+    text-decoration: underline;
+}
+nav ul li a{
+    color: #3CC47C;
+    text-decoration: underline;
+}
+/* 头部样式 */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #1E392A;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 1em 2em 0 rgba(0, 0, 0, 0.2);
+    height: 5em; /* 固定 header 高度 */
+    z-index: 1000; /* 确保 header 在最上层 */
+}
+
+header img {
+    width: 4em;
+    height: 4em;
+    margin-right: 1em;
+}
+
+header > div {
+    display: flex;
+    gap: 10px; /* 间隔调整 */
+}
+
+header > div a img {
+    float: right;
+}
+
+nav {
+    margin-top: 4em; /* 与 header 距离 */
+    background-color: #1E392A;
+}
+nav ul{
+    background-color: white;
+}
+ 
+nav ul li {
+    text-transform: small-caps;
+    /* padding: 0.5em 1em; */
+    /* margin-bottom: 0.5em; */
+    padding: 1em 0.5em;
+    font-size: 1.5em;
+    text-align: center;
+    color:#3CC47C;
+    background-color: white;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+nav ul li:hover {
+    background-color: #3CC47C;
+}
+
+nav ul li:hover a{
+    color: #FFFFFF;
+}
+
+nav ul li ul{
+    display: none;
+}
+
+/* 文字样式 */
+h1 {
+    font-size: 4em;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-right: auto;
+}
+
+h2 {
+    display:flex;
+    width: 10em;
+    font-size: x-large;
+    background-color: #E9C893;
+    text-align: center;
+    color: white;
+    margin: 0;
+    align-self: stretch;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+h3{
+    border: 2px solid #3CC47C;
+    text-align: center;
+    border-radius: 1em;
+    box-shadow: 0 0.1em 0.1em #999;
+    padding: 30px;
+    margin: 1em 10px;
+}
+
+h3:hover{
+    background-color: #3CC47C;
+    color: white;  
+}
+h3:hover a{
+    color: white;
+}
+h4{
+    text-align: center;
+    font-size: xx-large;
+    color:#3CC47C;
+    text-transform: uppercase;
+}
+p {
+    flex: 1;    
+    align-self: stretch; 
+    margin: 0; /* 去除默认外边距 */
+    padding-left: 1em; 
+}
+article ul li{
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+article dl dt{
+    text-decoration: underline;
+    font-weight: bold;
+}
+caption{
+    color: #3CC47C;
+    text-decoration: underline;
+    font-style: italic;
+    font-size: 1.2em;
+    margin-bottom: 2em;
+    
+}
+dt{
+    text-align: left;
+}
+figcaption {
+    color: #3CC47C;
+    font-style: italic;
+    text-align: center;
+    text-decoration: underline;
+}
+#lists_section{
+    text-align: center;
+}
+
+/* 列表布局和样式 */
+ol {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    counter-reset: item;
+}
+li {
+    counter-increment: item;
+}
+/* 每个列表项样式 */
+ol li {
+    display: list-item;
+    width: 200px; /* 控制每个项目的宽度 */
+    margin: 5px 10px;
+}
+
+/* 列表项中的编号样式 */
+ol li::marker {
+    display: list-item;
+    content: counter(item);
+    color: red;
+    font-weight: bold;
+}
+
+video{
+    height: 32em;
+    width: auto;
+}
+/* 按钮和输入框样式 */
+#buttons input[type="submit"] {
+    border-radius: 1em;
+    padding: 10px 10px;
+    box-shadow: 0 0.1em 0.1em #999;
+    background-color: gainsboro;
+    align-self: center;
+    width: 10em;
+    font-size: large;
+    color: green;
+}
+#buttons input[type="submit"]:hover {
+    background-color: green;
+    color:white
+}
+#buttons input[type="reset"] {
+    border-radius: 1em;
+    padding: 10px 10px;
+    box-shadow: 0 0.1em 0.1em #999;
+    background-color: gainsboro;
+    align-self: center;
+    width: 10em;
+    font-size: large;
+    color: red;
+}
+#buttons input[type="reset"]:hover {
+    background-color: red;
+    color:white
+}
+
+/* 表格样式 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 0.5em;
+    border: 1px solid #CCCCCC;
+}
+
+table tr:nth-child(even) {
+    background-color: #EFEFEF;
+}
+tbody tr:hover {
+    background-color: #3CC47C;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column; /* 垂直排列 */
+    align-items: center;    /* 水平居中 */
+    justify-content: center; /* 垂直居中 */
+    width: 100%;
+}
+
+/* info 和 message 样式 */
+fieldset{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 10px 0; /* 间距 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-width: 3px;
+    width: 500px;
+}
+fieldset legend {
+    width: auto;
+    background-color: #E9C893;
+}
